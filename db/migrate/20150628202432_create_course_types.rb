@@ -3,9 +3,8 @@ class CreateCourseTypes < ActiveRecord::Migration
     create_table :course_types do |t|
       t.string :name
       t.text :description
-      t.datetime :beginDate
-      t.datetime :endDate
-      t.reference :course
+      t.date :start
+      t.date :end
       t.timestamps null: false
     end
   end
