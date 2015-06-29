@@ -5,6 +5,7 @@ class CreateCourseTypes < ActiveRecord::Migration
       t.text :description
       t.date :start
       t.date :end
+      
       t.timestamps null: false
     end
   end
