@@ -3,7 +3,7 @@
 <div class="container">
     <%= form_for :session, :html => {:role => "form"} do |f| %>
         <P><%= f.text_field :email, :placeholder => "E-mail" %>
-        <P><%= f.text_field :password, :placeholder => "Password" %>
+        <P><%= f.password_field :password, :placeholder => "Password" %>
         <P><%= f.submit "Log in", :class => "form-btn" %>
     
     <% end %>
