@@ -4,7 +4,7 @@ class LearnersController < ApplicationController
   end
 
   def create
-    @learner = Learner.new(params)
+    @learner = Learner.new(learner_params)
     if @learner.save
       redirect_to root_url
     else
@@ -14,7 +14,7 @@ class LearnersController < ApplicationController
   
   private
   
-  def params
+  def learner_params
      params.require(:learner).permit(:first_name, :last_name, :email, :password, :password_confirmation) 
   end
 end
