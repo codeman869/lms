@@ -3,6 +3,7 @@ class CourseTypesController < ApplicationController
   
 
   def new
+    @courseType = CourseType.new
   end
 
   def create
