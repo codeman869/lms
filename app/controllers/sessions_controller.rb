@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+    redirect_to "/course_types/new" if current_user
   end
 
   def create
