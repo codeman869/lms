@@ -1,6 +1,9 @@
 class CourseTypesController < ApplicationController
   before_action :require_user
   
+  def index
+    @courseTypes = CourseType.all
+  end
 
   def new
     @courseType = CourseType.new

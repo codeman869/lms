@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   post '/signup' => 'learners#create'
 
+  get 'course_types' => 'course_types#index'
   #get 'sessions/new'
 
   #get 'sessions/create'

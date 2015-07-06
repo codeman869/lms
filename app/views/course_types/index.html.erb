@@ -1,0 +1,22 @@
+<h1>Course Types</h1>
+
+<table class="table-striped table-hover">
+    <tr>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Start Date</td>
+            <td>End Date</td>
+            
+    </tr>
+    
+    <% @courseTypes.each do |courseType| %>
+        <tr>
+            <td><%=courseType.name %></td>
+            <td><%=courseType.description %></td>
+            <td><%=courseType.start.to_s(:courseDate)%></td>
+            <td><%=courseType.end.to_s(:courseDate) %></td>
+            
+        </tr>
+    <% end %>
+</table>
+
