@@ -1,7 +1,7 @@
 <h1>Course Types</h1>
 
 <table class="table-striped table-hover">
-    <tr>
+    <tr class="text-center" style="font-weight:bold">
             <td>Name</td>
             <td>Description</td>
             <td>Start Date</td>
@@ -11,10 +11,10 @@
     
     <% @courseTypes.each do |courseType| %>
         <tr>
-            <td><%=courseType.name %></td>
-            <td><%=courseType.description %></td>
-            <td><%=courseType.start.to_s(:courseDate)%></td>
-            <td><%=courseType.end.to_s(:courseDate) %></td>
+            <td class="col-xs-3"><%=courseType.name %></td>
+            <td class="col-xs-3"><%=courseType.description %></td>
+            <td class="col-xs-3"><%=courseType.start.to_s(:courseDate)%></td>
+            <td class="col-xs-3"><%=courseType.end.to_s(:courseDate) %></td>
             
         </tr>
     <% end %>
