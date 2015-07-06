@@ -11,4 +11,11 @@ class CourseTypesController < ApplicationController
 
   def edit
   end
+  
+  private
+  
+  def courseTypeParams
+    params.reqire(:id,:start,:end,:title).permit(:description)
+  end
+  
 end

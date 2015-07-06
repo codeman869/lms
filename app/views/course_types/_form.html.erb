@@ -1,0 +1,8 @@
+<%= form_for @courseType do |f| %>
+<P><%= f.text_field :name, :placeholder => "Course Title" %></P>
+<P><%= f.text_area :description, :placeholder => "Course Description" %> </P>
+<P><%= f.date_field :start %></P>
+<P><%= f.date_field :end %></P>
+<P><%= f.submit "Create New Course Type", :class => "form-btn"%></P>
+
+<% end %>
