@@ -20,6 +20,17 @@ class CourseTypesController < ApplicationController
   end
 
   def edit
+    @courseType = CourseType.find_by_id(params[:id])
+  end
+  
+  def update
+    @courseType = CourseType.find(params[:id])
+    if @courseType.update_attributes(courseTypeParams)
+      redirect_to "/course_types"
+    else
+      redirect_to root_url
+    end
+    
   end
   
   private
