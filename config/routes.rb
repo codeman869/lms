@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  get 'courses/new'
+
+  get 'courses/show'
+
+  get 'courses/edit'
+
   resources :course_types, only: [:index,:new, :show, :update, :edit]
 
   get '/signup' => 'learners#new'
