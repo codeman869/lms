@@ -1,18 +1,13 @@
 Rails.application.routes.draw do
   
-  resources :course_types
+  resources :course_types, only: [:index,:new, :update, :edit]
 
   get '/signup' => 'learners#new'
 
   post '/signup' => 'learners#create'
 
   get 'course_types' => 'course_types#index'
-  #get 'sessions/new'
-
-  #get 'sessions/create'
-
-  get 'sessions/destroy'
-
+ 
   get '/login' => 'sessions#new'
 
   post '/login' => 'sessions#create'
