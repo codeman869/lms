@@ -1,0 +1,21 @@
+<h1><%= @courseType.name %></h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="xs-col-2">Start Date</th>
+            <th class="xs-col-8">&nbsp</th>
+            <th class="xs-col-2">End Date</th>
+        </tr>
+    </thead>
+    <tr>
+        <td><%= @courseType.start.to_s(:courseDate) %></td>
+        <td>&nbsp</td>
+        <td><%= @courseType.end.to_s(:courseDate) %></td>
+    </tr>
+</table>
+
+<div class="xs-col-12" >
+    <%= @courseType.description %>
+</div>
+
