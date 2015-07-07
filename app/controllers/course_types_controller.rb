@@ -33,6 +33,10 @@ class CourseTypesController < ApplicationController
     
   end
   
+  def show
+    @courseType = CourseType.find(params[:id])
+  end
+  
   private
   
   def courseTypeParams
