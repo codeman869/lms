@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :courses, only: [:new, :show, :edit, :update]
+  resources :courses
 
   resources :course_types, only: [:index,:new, :show, :update, :edit]
 
