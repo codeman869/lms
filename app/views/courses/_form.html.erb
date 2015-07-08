@@ -1,8 +1,8 @@
 <%= form_for @course do |f| %>
 
-<P><%= f.datetime_field :start %></p>
+<P><%=f.label "Start Date and Time:" %><%= f.datetime_select :start %></p>
 
-<p><%= f.datetime_field :end %></p>
+<p><%=f.label "End Date and Time:"%><%= f.datetime_select :end %></p>
 
 <%= f.submit :class => "form-btn" %>
 

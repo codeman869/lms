@@ -1,12 +1,13 @@
 <h1>Course Types</h1>
 
-<table class="table table-striped table-hover col-xs-3 table-responsive">
+<table class="table table-striped table-hover table-responsive">
     <thead>
     <tr>
             <th>Name</th>
             <th>Description</th>
             <th>Start Date</th>
             <th>End Date</th>
+            <th>Actions</th>
             
     </tr>
     </thead>
@@ -16,6 +17,10 @@
             <td><%=courseType.description %></td>
             <td><%=courseType.start.to_s(:courseDate)%></td>
             <td><%=courseType.end.to_s(:courseDate) %></td>
+            <td><a href=<%=edit_course_type_path(courseType.id)%> 
+            class="btn btn-default"><span class='glyphicon glyphicon-plus'></span></a>
+            <a href=<%=edit_course_type_path(courseType.id)%> 
+            class="btn btn-default"><span class='glyphicon glyphicon-pencil'></span></a></td>
             
         </tr>
     <% end %>
