@@ -13,7 +13,7 @@ class CourseTypesController < ApplicationController
     @courseType = CourseType.new(courseTypeParams)
     
     if @courseType.save
-      redirect_to root_url
+      redirect_to "/course_types"
     else
       redirect_to new_course_type_path
     end

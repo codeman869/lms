@@ -3,6 +3,7 @@ class CreateCourses < ActiveRecord::Migration
     create_table :courses do |t|
       t.datetime :start
       t.datetime :end
+      t.belongs_to :course_type
       t.timestamps null: false
     end
   end

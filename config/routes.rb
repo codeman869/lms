@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :course_types, only: [:index,:new, :show, :update, :edit]
 
+  post 'course_types' => 'course_types#create'
   get '/signup' => 'learners#new'
 
   post '/signup' => 'learners#create'
