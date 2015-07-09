@@ -13,7 +13,7 @@ class CourseTypesController < ApplicationController
     @courseType = CourseType.new(courseTypeParams)
     
     if @courseType.save
-      redirect_to "/course_types"
+      redirect_to course_types_path
     else
       redirect_to new_course_type_path
     end
@@ -40,7 +40,7 @@ class CourseTypesController < ApplicationController
   private
   
   def courseTypeParams
-    params.require(:course_type).permit(:description,:start,:end,:name)
+    params.require(:course_type).permit(:description,:name,:is_active)
   end
   
 end
