@@ -7,7 +7,7 @@ class LearnersController < ApplicationController
     @learner = Learner.new(learner_params)
     if @learner.save
       session[:user_id] = @learner.id
-      redirect_to "/course_types/new"
+      redirect_to course_types_path
     else
       redirect_to signup_url
     end
