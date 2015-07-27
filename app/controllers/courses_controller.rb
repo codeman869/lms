@@ -1,7 +1,14 @@
 class CoursesController < ApplicationController
+  
+  def index
+    @courseType = CourseType.find(params[:course_type_id])
+    @courses = @courseType.courses
+  end
+  
+  
   def new
     @course = Course.new
-    @courseTypes = CourseType.all
+    @courseTypes = CourseType.find(params[:course_type_id])
   end
 
   def show
@@ -9,6 +16,7 @@ class CoursesController < ApplicationController
   end
 
   def edit
+    @courseType = CourseType.find(params[:course_type_id])
     @course = Course.find(params[:id])
   end
   

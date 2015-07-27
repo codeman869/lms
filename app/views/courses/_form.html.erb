@@ -4,14 +4,6 @@
 
 <p><%=f.label "End Date and Time:"%><%= f.datetime_select :end %></p>
 
-<P><select name="course[course_type_id]">
-    <% CourseType.all.each do |course_type| %>
-        <option value="<%=course_type.id%>"><%= course_type.name %> </option>
-    
-    <% end %>
-    
-    
-</select></P>
 
 <%= f.submit :class => "form-btn" %>
 
