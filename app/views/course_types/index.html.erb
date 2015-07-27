@@ -13,7 +13,9 @@
         <tr>
             <td><%=courseType.name %></td>
             <td><%=courseType.description %></td>
-            <td><a href=<%=edit_course_type_path(courseType.id)%> 
+            <td><a href=<%=course_type_path(courseType.id)%> class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span></a>
+            <a href=<%=edit_course_type_path(courseType.id)%> 
             class="btn btn-default"><span class='glyphicon glyphicon-plus'></span></a>
             <a href=<%=edit_course_type_path(courseType.id)%> 
             class="btn btn-default"><span class='glyphicon glyphicon-pencil'></span></a></td>
